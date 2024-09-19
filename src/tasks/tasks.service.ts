@@ -15,33 +15,6 @@ export class TasksService {
       return this.tasksRepository.getTasks(filterDto);
   }
 
-  // getAllTasks(): Task[] {
-  //   return this.tasks;
-  // }
-
-  // getTasksWithFilters(filterDto: GetTasksFilterDto): Task[] {
-  //   const { status, search } = filterDto;
-  //   let tasks = this.getAllTasks();
-
-  //   if (status) {
-  //     tasks = tasks.filter((task) => task.status === status);
-  //   }
-
-  //   if (search) {
-  //     tasks = tasks.filter((task) => {
-  //       if (
-  //         task.title.toLowerCase().includes(search.toLowerCase()) ||
-  //         task.description.toLowerCase().includes(search.toLowerCase())
-  //       ) {
-  //           return true;
-  //       }
-  //       return false;
-  //     });
-  //   }
-
-  //   return tasks;
-  // }
-
   getTaskById(id: string): Promise<Task> {
     return this.tasksRepository.getTaskById(id);
   }
